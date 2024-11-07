@@ -1,4 +1,11 @@
 RILEM Metadata tool 
 ===================
+first install requirements using 
 
-This is readme file add details here
+```bash
+pip install -r requirements.txt
+
+to launch the app 
+
+```bash
+streamlit run app.py
