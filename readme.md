@@ -4,8 +4,10 @@ first install requirements using
 
 ```bash
 pip install -r requirements.txt
+```
 
-to launch the app 
+To launch the app 
 
 ```bash
 streamlit run app.py
+```
