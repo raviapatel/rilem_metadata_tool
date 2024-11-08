@@ -10,8 +10,8 @@
         <mxCell id="joMMrS8FZHTddyct-S3n-5" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="130" y="260" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="joMMrS8FZHTddyct-S3n-6" value="First Name, Last Name" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="110" y="230" width="170" height="30" as="geometry" />
+        <mxCell id="joMMrS8FZHTddyct-S3n-6" value="First Name, Middle Names, Last Name" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="130" y="230" width="230" height="30" as="geometry" />
         </mxCell>
         <mxCell id="joMMrS8FZHTddyct-S3n-7" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="130" y="340" width="120" height="90" as="geometry" />
@@ -22,7 +22,7 @@
         <mxCell id="joMMrS8FZHTddyct-S3n-9" value="Dropdown:&lt;div&gt;[powder, slurry]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="140" y="350" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="uJxmNB4ZvZF7l-k690Ug-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="uJxmNB4ZvZF7l-k690Ug-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="130" y="490" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
