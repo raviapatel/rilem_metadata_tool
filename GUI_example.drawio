@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="joMMrS8FZHTddyct-S3n-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="90" y="220" width="585" height="650" as="geometry" />
+          <mxGeometry x="90" y="249" width="585" height="920" as="geometry" />
         </mxCell>
         <mxCell id="joMMrS8FZHTddyct-S3n-5" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="130" y="270" width="120" height="20" as="geometry" />
@@ -68,7 +68,7 @@
           <mxGeometry x="305" y="640" width="105" height="30" as="geometry" />
         </mxCell>
         <mxCell id="l4BphHaSzq68eEBDJjwa-19" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="297.5" y="670" width="120" height="110" as="geometry" />
+          <mxGeometry x="310" y="670" width="120" height="110" as="geometry" />
         </mxCell>
         <mxCell id="l4BphHaSzq68eEBDJjwa-20" value="Dropdown:&lt;div&gt;[cubic, rhombic, cylinder, other]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="327.5" y="710" width="60" height="30" as="geometry" />
@@ -76,8 +76,26 @@
         <mxCell id="l4BphHaSzq68eEBDJjwa-22" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="450" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="l4BphHaSzq68eEBDJjwa-23" value="Measurments in" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="444" y="640" width="106" height="30" as="geometry" />
+        <mxCell id="l4BphHaSzq68eEBDJjwa-23" value="Geometry parameter in mm x mm x mm" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="444" y="640" width="226" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l4BphHaSzq68eEBDJjwa-24" value="Experiment" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="135" y="910" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l4BphHaSzq68eEBDJjwa-25" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="950" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l4BphHaSzq68eEBDJjwa-26" value="Experiment Technique" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="295" y="910" width="125" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l4BphHaSzq68eEBDJjwa-27" value="allows to create multiple" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="135" y="685" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l4BphHaSzq68eEBDJjwa-28" value="List of samples created" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="135" y="810" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l4BphHaSzq68eEBDJjwa-30" value="connected geometries" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="255" y="810" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
