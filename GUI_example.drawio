@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="joMMrS8FZHTddyct-S3n-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="90" y="249" width="585" height="920" as="geometry" />
+          <mxGeometry x="85" y="220" width="585" height="990" as="geometry" />
         </mxCell>
         <mxCell id="joMMrS8FZHTddyct-S3n-5" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="130" y="270" width="120" height="20" as="geometry" />
@@ -83,7 +83,7 @@
           <mxGeometry x="135" y="910" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="l4BphHaSzq68eEBDJjwa-25" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="130" y="950" width="120" height="60" as="geometry" />
+          <mxGeometry x="125" y="940" width="120" height="170" as="geometry" />
         </mxCell>
         <mxCell id="l4BphHaSzq68eEBDJjwa-26" value="Experiment Technique" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="295" y="910" width="125" height="30" as="geometry" />
@@ -96,6 +96,12 @@
         </mxCell>
         <mxCell id="l4BphHaSzq68eEBDJjwa-30" value="connected geometries" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="255" y="810" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l4BphHaSzq68eEBDJjwa-31" value="Dropdown:&lt;div&gt;[chemistry, mineralogy,strength, porosity, grain charakterization, permeability, freeze thaw durability, chemical durability, carbonation, other]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="970" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="l4BphHaSzq68eEBDJjwa-33" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="294" y="940" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
