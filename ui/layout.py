@@ -19,6 +19,7 @@ from handlers.data_categories import (
     update_common_units,
     add_data_category,
     update_data_subcategories_for_columns,
+    update_column_sub_description,
     add_column_description,
 )
 from handlers.export import export_json, save_json_file, clear_all
@@ -84,11 +85,12 @@ def build_app() -> gr.Blocks:
         ext = gr.Textbox(label="File Extension")
         ts = gr.Checkbox(label="Time Series?")
         nfiles = gr.Number(label="Number of Files", value=1)
+        nrows = gr.Number(label="Number of Rows", value=0, visible=False)
         desc_ds = gr.Textbox(label="Dataset Description", lines=3)
 
-        # -- Column Descriptions (text/tables only) -------------------------
+        # -- Column Descriptions (text/table only) -------------------------
         with gr.Group(visible=False) as column_description_group:
-            gr.Markdown("### 📑 Column Descriptions (only for Text / Tables)")
+            gr.Markdown("### 📑 Column Descriptions (only for Text / Table)")
 
             col_super_cat = gr.Dropdown(
                 list(data_loader.data_categories_map.keys()),
@@ -112,6 +114,11 @@ def build_app() -> gr.Blocks:
                 [col_super_cat],
                 [col_sub, col_desc_note],
             )
+            col_sub.change(
+                update_column_sub_description,
+                [col_sub, col_super_cat],
+                [col_desc_note],
+            )
             btn_add_col.click(
                 add_column_description,
                 [col_super_cat, col_sub, col_name, col_entity, col_desc_state],
@@ -130,6 +137,7 @@ def build_app() -> gr.Blocks:
                 [], label="Data Category", multiselect=True
             )
             data_units = gr.Textbox(label="Common Units", interactive=False)
+            data_cat_desc = gr.Textbox(label="Category Description", interactive=False)
 
             btn_add_data_cat = gr.Button("Add Data Category")
             data_selected_box = gr.Textbox(
@@ -145,7 +153,7 @@ def build_app() -> gr.Blocks:
             data_cat_sub.change(
                 update_common_units,
                 [data_cat_sub, data_super_cat],
-                [data_units],
+                [data_units, data_cat_desc],
             )
             btn_add_data_cat.click(
                 add_data_category,
@@ -229,19 +237,21 @@ def build_app() -> gr.Blocks:
             toggle_location_fields, [location_source], [location_value]
         )
 
-        # -- dtype toggle (nfiles / column descriptions / global data cats) --
+        # -- dtype toggle (nfiles / nrows / column descriptions / global data cats) --
         def toggle_fields_for_dtype(dtype_val):
-            is_text = dtype_val == "text/tables"
+            is_text_or_table = dtype_val in ("text", "table")
+            is_table = dtype_val == "table"
             return (
-                gr.update(visible=not is_text),   # nfiles
-                gr.update(visible=is_text),        # column_description_group
-                gr.update(visible=not is_text),    # global_data_categories_group
+                gr.update(visible=not is_text_or_table),  # nfiles
+                gr.update(visible=is_table),               # nrows
+                gr.update(visible=is_text_or_table),       # column_description_group
+                gr.update(visible=not is_text_or_table),   # global_data_categories_group
             )
 
         dtype.change(
             toggle_fields_for_dtype,
             [dtype],
-            [nfiles, column_description_group, global_data_categories_group],
+            [nfiles, nrows, column_description_group, global_data_categories_group],
         )
 
         # -- Submit dataset --------------------------------------------------
@@ -252,7 +262,7 @@ def build_app() -> gr.Blocks:
         btn_ds.click(
             submit_dataset,
             [
-                dtype, ext, ts, nfiles, desc_ds,
+                dtype, ext, ts, nfiles, nrows, desc_ds,
                 data_cat_state, mat_state, exp_state,
                 temp_source, temp_value, temp_unit,
                 location_source, location_value,

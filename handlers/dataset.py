@@ -27,6 +27,7 @@ def submit_dataset(
     ext: str,
     ts: bool,
     nfiles,
+    nrows,
     desc: str,
     data_cats_selected: list,
     materials_selected: list,
@@ -53,14 +54,22 @@ def submit_dataset(
 
         dtype_member = _enum_from_value(Datatype, dtype)
 
-        # text/tables always counts as 1 file
-        if dtype == "text/tables":
+        # text/table always counts as 1 file
+        if dtype in ("text", "table"):
             file_count = 1
         else:
             try:
                 file_count = int(nfiles)
             except Exception:
                 return "❌ Number of files must be an integer.", {}
+
+        # Number of rows (table only)
+        row_count = None
+        if dtype == "table":
+            try:
+                row_count = int(nrows)
+            except Exception:
+                return "❌ Number of rows must be an integer.", {}
 
         # Temperature
         temp_entry = None
@@ -85,6 +94,7 @@ def submit_dataset(
             "extension_of_the_file": str(ext),
             "time_series": bool(ts),
             "number_of_files": file_count,
+            "number_of_rows": row_count,
             "description": str(desc),
             "Data_Categories": data_cats_selected or [],
             "Materials": materials_selected or [],

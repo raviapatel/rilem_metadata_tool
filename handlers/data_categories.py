@@ -22,14 +22,15 @@ def update_data_subcategories(super_cat: str) -> tuple:
 
 
 def update_common_units(data_cats, super_cat: str):
-    """Update the units textbox when a data subcategory is selected."""
+    """Update the units and description textboxes when a data subcategory is selected."""
     if not super_cat or not data_cats:
-        return gr.update(value="")
+        return gr.update(value=""), gr.update(value="")
     first_cat = data_cats[0] if isinstance(data_cats, list) else data_cats
     for item in data_loader.data_categories_map[super_cat]["subcategories"]:
         if item["name"] == first_cat:
-            return gr.update(value=item["units"])
-    return gr.update(value="")
+            desc = item.get("description", "")
+            return gr.update(value=item["units"]), gr.update(value=desc)
+    return gr.update(value=""), gr.update(value="")
 
 
 def add_data_category(super_cat: str, data_cat, state: list) -> tuple[list, str]:
@@ -82,7 +83,16 @@ def update_data_subcategories_for_columns(super_cat: str) -> tuple:
     if super_cat not in data_loader.data_categories_map:
         return gr.update(choices=[], value=[]), ""
     subs = [item["name"] for item in data_loader.data_categories_map[super_cat]["subcategories"]]
-    return gr.update(choices=subs, value=[]), f"Super Category: {super_cat}"
+    return gr.update(choices=subs, value=[]), ""
+
+
+def update_column_sub_description(data_cats, super_cat: str):
+    """Show the description when a column data subcategory is selected."""
+    if not super_cat or not data_cats:
+        return gr.update(value="")
+    first_cat = data_cats[0] if isinstance(data_cats, list) else data_cats
+    desc = _lookup_description(super_cat, first_cat)
+    return gr.update(value=desc)
 
 
 def add_column_description(

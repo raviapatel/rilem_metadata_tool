@@ -32,7 +32,8 @@ class SetEncoder(json.JSONEncoder):
 #  Fixed enums                                                                 #
 # --------------------------------------------------------------------------- #
 class Datatype(str, Enum):
-    text = "text/tables"
+    text = "text"
+    table = "table"
     image = "image"
     audio = "audio"
     video = "video"
