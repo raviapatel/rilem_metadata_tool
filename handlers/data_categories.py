@@ -37,10 +37,40 @@ def add_data_category(super_cat: str, data_cat, state: list) -> tuple[list, str]
     state = state or []
     if not super_cat or not data_cat:
         return state, "⚠️ Select a super category and a data category."
-    entry = f"{super_cat} → {data_cat}"
-    if entry not in state:
-        state.append(entry)
-    return state, ", ".join(state)
+    # data_cat may be a list (multiselect) or a single string
+    cats = data_cat if isinstance(data_cat, list) else [data_cat]
+    for cat in cats:
+        entry = f"{super_cat} → {cat}"
+        if entry not in state:
+            state.append(entry)
+    return state, _format_selected(state)
+
+
+def _format_selected(state: list) -> str:
+    """Format the selected data categories with descriptions for display."""
+    lines = []
+    for entry in state:
+        parts = entry.split(" → ", 1)
+        if len(parts) == 2:
+            super_cat, cat_name = parts
+            desc = _lookup_description(super_cat, cat_name)
+            if desc:
+                lines.append(f"• {entry}\n  {desc}")
+            else:
+                lines.append(f"• {entry}")
+        else:
+            lines.append(f"• {entry}")
+    return "\n".join(lines)
+
+
+def _lookup_description(super_cat: str, cat_name: str) -> str:
+    """Find the description for a data category from the loaded map."""
+    if super_cat not in data_loader.data_categories_map:
+        return ""
+    for item in data_loader.data_categories_map[super_cat]["subcategories"]:
+        if item["name"] == cat_name:
+            return item.get("description", "")
+    return ""
 
 
 # --------------------------------------------------------------------------- #

@@ -72,9 +72,10 @@ def load_all() -> None:
         super_cat = str(row["Super_Category"]).strip()
         data_cat = str(row["Data_Category"]).strip()
         units = str(row["Common_Units"]).strip()
+        desc = str(row.get("Description", "")).strip() if "Description" in data_categories_df.columns else ""
         if super_cat not in data_categories_map:
             data_categories_map[super_cat] = {"description": super_cat, "subcategories": []}
-        data_categories_map[super_cat]["subcategories"].append({"name": data_cat, "units": units})
+        data_categories_map[super_cat]["subcategories"].append({"name": data_cat, "units": units, "description": desc})
 
     print("✅ CSVs loaded successfully.")
     print(f"   Materials categories : {len(materials_map)}")
