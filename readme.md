@@ -1,13 +1,13 @@
-RILEM Metadata tool 
+---
+title: RILEM Metadata Tool
+emoji: 📋
+colorFrom: blue
+colorTo: green
+sdk: gradio
+sdk_version: 4.44.0
+app_file: app.py
+pinned: false
+---
+
+RILEM Metadata Tool
 ===================
-first install requirements using 
-
-```bash
-pip install -r requirements.txt
-```
-
-To launch the app 
-
-```bash
-streamlit run app.py
-```

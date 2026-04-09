@@ -1,3 +1,10 @@
-streamlit
-numpy
+gradio==4.44.0
+jinja2<3.1.5
+pydantic==2.8.2
+pydantic[email]
 pandas
+python-dateutil
+email-validator
+huggingface_hub==0.19.4
+starlette<0.38.0
+fastapi<0.112.0
