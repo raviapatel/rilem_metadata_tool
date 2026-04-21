@@ -3,7 +3,7 @@ This document is a instruction how to use the *RILEM Metadata Compilation Tool*.
 
 The tool is split in two parts.
 
-### Part one named author information
+### Part one: author information
 
 <img width="1484" height="1008" alt="image" src="https://github.com/user-attachments/assets/f1d0f965-4f50-483b-a909-78bee1cd88b3" />
 
@@ -34,3 +34,18 @@ Unique persistent identifier for your dataset. Depending on your repository that
 
 **Contributors:**
 Same as the authors of a paper, or if there is a corresponding paper it could be the same authors there are on the paper.
+
+When every field was filled out click the ***Submit Author*** button.
+
+If you are sucessful you get a confirmation an a preview of the structured view of the author information:
+<img width="1493" height="1152" alt="image" src="https://github.com/user-attachments/assets/e24b7eda-1861-4f10-8492-debe37521071" />
+
+### Part two: Dataset Information
+This part is separated in some subsections. The first subsection requires some general information about the research data that should be described.
+<img width="1488" height="500" alt="image" src="https://github.com/user-attachments/assets/3c608be3-0a10-412f-8127-e0c0f4265ddd" />
+
+First the kind of data should be described. 
+In the dropdown menue a selection between text, table, image, audio and video is required. In the case of more than one data type in your repository or the situation that e.g. multiple tables were saved in the repository please pick one first, **you will be able to come back and enter additional descriptions** as soon as you filled out this section. The information enables sorting of your data and allows researchers e.g. looking for graphic information in microscopy pictures to find research datasets that contain pictures.
+
+
+
