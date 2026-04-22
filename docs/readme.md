@@ -1,4 +1,4 @@
 TOC
 ===
-1. [How to use the tool](how to use the tool.md)
-2. [Git & Deployment Workflow](git_workflow.md)
+1. [How to use the tool](how_to_use_the_tool.md)
+3. [Git & Deployment Workflow](git_workflow.md)
