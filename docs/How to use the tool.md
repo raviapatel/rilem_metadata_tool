@@ -68,9 +68,41 @@ In the case of *table* the following filed pops up:
 It works similar to the previously described *Data Categories (global)* regarding the entry of information but asks for additional information for each entered column.
 The goal is to proviede the actual of title or header of each column (please copy paste the header or use the exact upper and lower case letters, this makes it easier to reuse the data, even if your header is a placehoder like "Factor_1") and additionally write down the entity of the information of the column (e.g. N/mm^2 or g/mm^3...).
 
-The next section is **Materials** the idea is to list every material that was used in the experiments but not necessarily to order it. After selection it can be added with the *Add Material(s)* button. The materials are displayed in the filed below.
+The next section is **Materials** the idea is to list every material that was used in the experiments but not necessarily to order it. After selection it can be added with the *Add Material(s)* button. The materials are displayed in the field below.
 <img width="1489" height="557" alt="image" src="https://github.com/user-attachments/assets/05dc5cd0-1f69-4e37-bd93-07eb38b1651a" />
-The section *Category Description* gives a short descriptions what is meant with the selected material. it cannot be selected and has information purpose only.
+The section *Category Description* gives a short descriptions what is meant with the selected material. It cannot be selected and has information purpose only.
+
+The next section is **Experiment Selection**. The user should list experiments that were relevant for the data in the repository. It helps someone looking for data to sort by experiment and find datasets where for example compressive strength testing was performed. After selection the Experiment can be added with the *Add Experiments(s)* button. The Experiments are displayed in the field below.
+
+<img width="1485" height="602" alt="image" src="https://github.com/user-attachments/assets/6b0dbdc2-f15a-408a-b5be-783303e73dc8" />
+
+The section *Category Description* gives a short descriptions what is meant with the selected experiment. It cannot be selected and has information purpose only.
+
+The next entry is **Temperature**. The field allows researchers looking for data to select datasets that are in their temperature range of interest (maybe the 38 °C data is great but not useful for somebody looking for Room Temperature data). 
+The dropdown menue offers four options: 
+- none (meaning you do not give any information, should not be used if possible, might be necessary if a historic or older dataset is added not by the original research data creator)
+- in the dataset (meaning that maybe there is a column in the dataset that contains multiple temperatures that were measured)
+- Room Temperature (meaning the data was created in a lab and it had the usual roundabout 20 to 25 °C)
+- user defined (this selection opens two boxes, the first one *Value* is there to enter the Temperature, the secod one *Unit* contains a dropdown menue where the Units Celsius, Farenheit and Kelvin can be selected)
+<img width="1493" height="313" alt="image" src="https://github.com/user-attachments/assets/7bcc5d2e-ee67-44f2-815c-e437ed289cbb" />
+
+The next entry is **Location Data**. The field allows researchers looking for datasets to sort by geo location - this is of course meant for field sites for outdoor exposure or samples taken from e.g. infrastructure. (Beeing able to sort field datasets by geolocation might come in handy).
+
+<img width="1486" height="239" alt="image" src="https://github.com/user-attachments/assets/4bf2c25a-5f9a-411b-b8c8-50b5c2c0476e" />
+The dropdown menue offers four options: 
+- none (meaning you do not give any information, should not be used if possible, might be necessary if a historic or older dataset is added not by the original research data creator)
+- in the dataset (meaning that maybe there is a column in the dataset that contains e.g. coordinates)
+- Laboratory/Indoor (meaning asking for a location is meaningless becaus everything was done in a lab)
+- Coordinates (this selection opens the field *Coordinates* that allows to enter geo coordinates)
+
+With the button *Submit Dataset Metadata* the metadata is structured and displayed.
+
+<img width="1500" height="1040" alt="image" src="https://github.com/user-attachments/assets/e2a052f7-0ad7-4e98-9c4a-fe527984325b" />
+
+Next the complete submitted information (including also the Author information) can be put together into a JSON File by pressing the Button *Generate Combined JSON*.
+After sumbitting the first Dataset Metadata like this it is possible to enter multiple Dataset Metadata descriptions (in the case that there are multiple folders in the repository that could also contain images, tables etc.).
+The Dataset Metadata must be transferred into the JSON format before the nex one can be entered, otherwise it will be lost.
+
 
 
 
