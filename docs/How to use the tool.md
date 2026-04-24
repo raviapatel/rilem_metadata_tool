@@ -62,6 +62,11 @@ Here is an example:
 The first two fields are dropdown lists. The user should pick information that fits their data from the list and add it. Multiple data categories can be added by clicking the button *Add data categorie*. 
 The two fields *Common Units* and *Category Description* are just there help the user select the data categories. They just display information that is common to the selected options in the dropdown lists.
 
+In the case of *table* the following filed pops up:
+<img width="1488" height="732" alt="image" src="https://github.com/user-attachments/assets/81d1972c-62d9-4cde-85b8-58e1609ba5c9" />
+
+It works similar to the previously described *Data Categories (global)* regarding the entry of information but asks for additional information for each entered column.
+The goal is to proviede the actual of title or header of each column (please copy paste the header or use the exact upper and lower case letters, this makes it easier to reuse the data, even if your header is a placehoder like "Factor_1") and additionally write down the entity of the information of the column (e.g. N/mm^2 or g/mm^3...).
 
 
 
