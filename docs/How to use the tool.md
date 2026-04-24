@@ -51,6 +51,17 @@ The checkbox for time series should be checked when measurments were done at mul
 
 The field *Number of Files* is shown in case of image, audio or video selection. It allows to detail how many files are in your repository folder (e.g. 10 microscopy images were put in one folder and the metadata I am describing is for this folder content).
 
+In case the information that is entered is for a table the field *Number of Rows* is displayed. 
+This information is important for researchers that are looking for data to estimate how big your dataset is (which might also influence the method that will be used to process the data in case of modeling). 
+
+The field *Dataset Description* allows to freely enter a description of your data, it can be formulated however it is deemed fit. Researchers looking for data can derive some additional information from this field and at a later point in time it might be used for LLM searches.
+
+What follows is a description of **Data Categories (global)** (the category *tables* is special and has another entry instead).
+Here is an example:
+<img width="1489" height="596" alt="image" src="https://github.com/user-attachments/assets/0ba17e49-d56b-4b09-94b7-2e72e868880d" />
+The first two fields are dropdown lists. The user should pick information that fits their data from the list and add it. Multiple data categories can be added by clicking the button *Add data categorie*. 
+The two fields *Common Units* and *Category Description* are just there help the user select the data categories. They just display information that is common to the selected options in the dropdown lists.
+
 
 
 
