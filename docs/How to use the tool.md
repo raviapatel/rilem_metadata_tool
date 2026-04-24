@@ -68,5 +68,12 @@ In the case of *table* the following filed pops up:
 It works similar to the previously described *Data Categories (global)* regarding the entry of information but asks for additional information for each entered column.
 The goal is to proviede the actual of title or header of each column (please copy paste the header or use the exact upper and lower case letters, this makes it easier to reuse the data, even if your header is a placehoder like "Factor_1") and additionally write down the entity of the information of the column (e.g. N/mm^2 or g/mm^3...).
 
+The next section is **Materials** the idea is to list every material that was used in the experiments but not necessarily to order it. After selection it can be added with the *Add Material(s)* button. The materials are displayed in the filed below.
+<img width="1489" height="557" alt="image" src="https://github.com/user-attachments/assets/05dc5cd0-1f69-4e37-bd93-07eb38b1651a" />
+The section *Category Description* gives a short descriptions what is meant with the selected material. it cannot be selected and has information purpose only.
+
+
+
+
 
 
