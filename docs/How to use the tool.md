@@ -47,5 +47,10 @@ This part is separated in some subsections. The first subsection requires some g
 First the kind of data should be described. 
 In the dropdown menue a selection between text, table, image, audio and video is required. In the case of more than one data type in your repository or the situation that e.g. multiple tables were saved in the repository please pick one first, **you will be able to come back and enter additional descriptions** as soon as you filled out this section. The information enables sorting of your data and allows researchers e.g. looking for graphic information in microscopy pictures to find research datasets that contain pictures.
 
+The checkbox for time series should be checked when measurments were done at multiple points in time on the samples (e.g. 1d, 2d, 7d, 28d values). 
+
+The field *Number of Files* is shown in case of image, audio or video selection. It allows to detail how many files are in your repository folder (e.g. 10 microscopy images were put in one folder and the metadata I am describing is for this folder content).
+
+
 
 
